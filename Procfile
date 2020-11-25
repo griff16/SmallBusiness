@@ -1,1 +1,1 @@
-web: gunicorn userRegistration.wsgi --log-file -
+web: gunicorn smallBusiness.wsgi --log-file -
