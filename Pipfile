@@ -9,6 +9,8 @@ verify_ssl = true
 gunicorn = "==19.9.0"
 django = "*"
 dj-database-url = "*"
+whitenoise = "*"
+psycopg2 = "*"
 
 [requires]
 python_version = "3.9"
