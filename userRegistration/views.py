@@ -1,5 +1,5 @@
 from django.shortcuts import HttpResponse
 
 # Create your views here.
-def loginPage(reqeust):
+def signUpPage(reqeust):
     return HttpResponse('this is login page')
