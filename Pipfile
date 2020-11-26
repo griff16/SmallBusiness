@@ -7,10 +7,10 @@ verify_ssl = true
 
 [packages]
 gunicorn = "==19.9.0"
-django = "*"
+django = "==3.0"
 dj-database-url = "*"
-whitenoise = "*"
+whitenoise = "==4.1.4"
 psycopg2 = "*"
 
 [requires]
-python_version = "3.9"
+python_version = "3.7"
