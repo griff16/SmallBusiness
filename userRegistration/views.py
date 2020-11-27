@@ -6,10 +6,13 @@ from .forms import RegisterForm
 def signUpPage(response):
     if response.method == "POST":
         form = RegisterForm(response.POST)
-        if form.is_valid():
+        
+        if form.is_valid():  # if it's valid
             form.save()
-
-        return redirect("www.google.com")
+            return redirect("/admin")
+        
+        print(form.errors)
+        return redirect("/signup")  # if it's not valid
 
     else:
 	    form = RegisterForm()
