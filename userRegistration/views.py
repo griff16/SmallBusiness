@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import RegisterForm
+from django.contrib import messages
 
 
 # Create your views here.
@@ -12,7 +13,6 @@ def signUpPage(response):
             return redirect("/admin")
         
         print(form.errors)
-        return redirect("/signup")  # if it's not valid
 
     else:
 	    form = RegisterForm()
