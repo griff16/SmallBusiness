@@ -1,9 +1,10 @@
+from django.http.response import HttpResponse
 from django.shortcuts import render, redirect
 from .forms import RegisterForm
-from django.contrib import messages
+from django.contrib.auth import authenticate
 
 
-# Create your views here.
+# SignUp View
 def signUpPage(response):
     if response.method == "POST":
         form = RegisterForm(response.POST)
@@ -18,3 +19,20 @@ def signUpPage(response):
 	    form = RegisterForm()
 
     return render(response, "userRegistration/signup.html", {"form":form})
+
+# # Login View
+# def login(request):
+    
+#     if request.method == "POST":
+#         form = LoginForm(request.POST)
+#         user = authenticate(username=form.username, password=form.password)
+
+#         if user is not None:
+#             return HttpResponse(form.username)
+#         else:
+#             return HttpResponse('No user found')
+    
+#     else:
+#         form = LoginForm()
+    
+#     render(request, "userRegistration/login.html", {"form":form})
