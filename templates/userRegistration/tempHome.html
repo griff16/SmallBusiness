@@ -1,0 +1,13 @@
+{% extends "layout/layout_home.html" %}
+
+{% block title %}Temp Home{% endblock %}
+
+{% block body %}
+    <h2>Temp home page</h2>
+    <p>here lists all the accesible links for this projects</p>
+    <li>
+        <a href="{% url signup%}">Signup Page</a>
+        <a href="{% url login %}">Login Page</a>
+        <a href="{% url admin %}">Admin Page</a>
+    </li>
+{% endblock %}

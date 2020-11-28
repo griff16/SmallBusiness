@@ -20,19 +20,6 @@ def signUpPage(response):
 
     return render(response, "userRegistration/signup.html", {"form":form})
 
-# # Login View
-# def login(request):
-    
-#     if request.method == "POST":
-#         form = LoginForm(request.POST)
-#         user = authenticate(username=form.username, password=form.password)
-
-#         if user is not None:
-#             return HttpResponse(form.username)
-#         else:
-#             return HttpResponse('No user found')
-    
-#     else:
-#         form = LoginForm()
-    
-#     render(request, "userRegistration/login.html", {"form":form})
+# Temp Home View
+def homeView(request):
+    return render(request, 'userRegistration/tempHome.html')
