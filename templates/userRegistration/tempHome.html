@@ -5,9 +5,19 @@
 {% block body %}
     <h2>Temp home page</h2>
     <p>here lists all the accesible links for this projects</p>
-    <li>
-        <a href="{% url signup%}">Signup Page</a>
-        <a href="{% url login %}">Login Page</a>
-        <a href="{% url admin %}">Admin Page</a>
-    </li>
+    
+    <ul>
+        <li>
+            <a href="{% url 'login' %}">Login</a>
+        </li>
+        
+        <li>
+            <a href="{% url 'signup' %}">Signup</a>
+        </li>
+        
+        <li>
+            <a href="{% url 'admin:index' %}">admin</a>
+        </li>
+    </ul>
+    
 {% endblock %}

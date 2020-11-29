@@ -5,18 +5,18 @@
 <html lang="en">
     <head>
         <title>{% block title %}{% endblock %}</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link href="{% static 'css/style_home.css' %}" rel="stylesheet">
     </head>
     <body>
         <div class="row">
             <div class="sidebar col-lg-2 col-md-3">
                 <h2>SmallBusiness</h2>
-                <form action="">
+                <form action="POST">
                     <input class="search" type="text" name="q" placeholder="Search">
                 </form>
                 <div>
-                    <a href="">Home</a>
+                    <a href="#">Home</a>
                 </div>
                 {% block nav %}
                 {% endblock %}
