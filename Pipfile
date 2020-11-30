@@ -12,6 +12,7 @@ dj-database-url = "*"
 whitenoise = "==4.1.4"
 psycopg2 = "*"
 django-crispy-forms = "*"
+django-countries = "*"
 
 [requires]
 python_version = "3.7"

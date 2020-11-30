@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'userRegistration',
     'crispy_forms',
+    'employee',
+    'django_countries',  # added django countries from packages
 ]
 
 MIDDLEWARE = [
