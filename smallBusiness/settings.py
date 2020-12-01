@@ -8,6 +8,9 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
+
+this is the url for how to convert sqlite to postgresql
+https://www.shubhamdipt.com/blog/django-transfer-data-from-sqlite-to-another-database/
 """
 
 import os
