@@ -1,8 +1,9 @@
 from django.urls import path
-from .views import listView
+from .views import createEmployee, employeeLandingView
 
 
 urlpatterns = [
-    path('employee/', listView, name='list_view'),
+    path('employee/', employeeLandingView, name='employee_landing_view'),
+    path('employee/create', createEmployee, name='employee_create'),
 ]
 

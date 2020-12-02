@@ -1,0 +1,14 @@
+{% extends "layout/layout_home.html" %}
+
+{% block title %}SmallBusiness | Employee{% endblock %}
+
+{% block body %}
+    <h2>Create Employee</h2>
+
+    <form action="{% url 'employee_create' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Create" class="btn btn-primary">
+    </form>
+
+{% endblock %}
