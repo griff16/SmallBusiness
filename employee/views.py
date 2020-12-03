@@ -1,7 +1,8 @@
 from django.urls import reverse
-from django.shortcuts import render, redirect
+from django.shortcuts import *
 from .models import Employees
 from .forms import CreateEmployeeForm
+from django.contrib import messages
 
 # the landing page for employee
 def employeeLandingView(request):  
@@ -13,12 +14,10 @@ def createEmployee(request):
     if request.method == "POST":
         form = CreateEmployeeForm(request.POST)
         
-        if form.is_valid():
-            
-
+        if form.is_valid(): 
             # later implement if the employee already exists then throw error
-
-            return redirect(reverse("entry", kwargs={"title": title}))
+            form.save()
+            messages.success(request, 'Created successfully')
 
         else:
             return render(request, "employee/createEmployee.html", {
@@ -32,3 +31,4 @@ def createEmployee(request):
 # editEmployee instance
 def editEmployee(request):
     pass
+
