@@ -1,6 +1,6 @@
 # SmallBusiness
 
-This is a a book keeping webapp for small businesses.
+This is a a book keeping webapp for small businesses.  
 Inspiration is from Salesforce's sales cloud.  
 
 
