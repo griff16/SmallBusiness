@@ -5,8 +5,13 @@ from .forms import CreateEmployeeForm
 from django.contrib import messages
 
 # the landing page for employee
-def employeeLandingView(request):  
-    return render(request, 'employee/employeeLandingView.html')
+def employeeLandingView(request):
+    for f in Employees._meta.get_fields():
+        print (f.db_column)
+
+    return render(request, 'employee/employeeLandingView.html', {
+        "employees" : Employees.objects.all()
+    })
 
 # create employee instance
 def createEmployee(request):

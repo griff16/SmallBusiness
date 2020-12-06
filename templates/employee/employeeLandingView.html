@@ -5,5 +5,23 @@
 {% block body %}
     <h2>Employee Landing View</h2>
     
+    <tbody>
+
+        <tr>
+            {% for ele in employees.columns%}
+                <th> {{ ele.name}} </th>
+            {% endfor %}
+        </tr> 
+
+        {% for ele in employees %}
+            {% comment %} {% for e in ele%}
+                <tr>
+                    <td> {{ e.name}} </td>
+                    <td> {{ e.email}} </td>
+                </tr>
+            {% endfor %} {% endcomment %}
+        {% endfor %}
+
+    </tbody>
     
 {% endblock %}
