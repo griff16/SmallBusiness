@@ -42,11 +42,11 @@
         },
         "django-countries": {
             "hashes": [
-                "sha256:64015977a5989bcb0e645007299b19fe8ac117466af375161b26bcfa32ae2808",
-                "sha256:a0f77154ae08cb38a0d65530a399ead5f5837ebf6c74f7576e71bb7acdacca94"
+                "sha256:11191d245256b4e46a4715e391ce0b2fa982e968a6a2b4d263cace95ebe448c1",
+                "sha256:936fd0716cec8388f7c50a8e9e11ba1049d926276fb4e7c8cca61716b78edc91"
             ],
             "index": "pypi",
-            "version": "==6.1.3"
+            "version": "==7.0"
         },
         "django-crispy-forms": {
             "hashes": [
@@ -55,6 +55,14 @@
             ],
             "index": "pypi",
             "version": "==1.10.0"
+        },
+        "django-tables2": {
+            "hashes": [
+                "sha256:9c175834130ebb2b3a5644431391e09128405e4538637804d5e74a8b96fc9f68",
+                "sha256:ad38ece83157b8b9c1fb72b0316fcffc4b32d7fec53eec3f2847b83c4c0a2cb2"
+            ],
+            "index": "pypi",
+            "version": "==2.3.3"
         },
         "gunicorn": {
             "hashes": [
