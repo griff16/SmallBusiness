@@ -1,6 +1,5 @@
 # SmallBusiness
-
-This is a a book keeping webapp for small businesses.  
+  
 Used Django as the framework and the inspiration is from Salesforce's sales cloud.  
 
 
