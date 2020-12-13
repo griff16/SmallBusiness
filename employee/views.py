@@ -1,25 +1,26 @@
+# the landing page for employees
+
 from django.urls import reverse
 from django.shortcuts import *
 from .models import Employees
 from .forms import CreateEmployeeForm
 from django.contrib import messages
+from django_tables2 import SingleTableView
+from .tables import EmployeeTable
 
-# the landing page for employee
-def employeeLandingView(request):
-    for f in Employees._meta.get_fields():
-        print (f.db_column)
 
-    return render(request, 'employee/employeeLandingView.html', {
-        "employees" : Employees.objects.all()
-    })
+class EmployeeLandingView(SingleTableView):
+    model = Employees
+    table_class = EmployeeTable
+    template_name = 'employee/employeeLandingView.html'
 
-# create employee instance
+
 def createEmployee(request):
-    
+
     if request.method == "POST":
         form = CreateEmployeeForm(request.POST)
-        
-        if form.is_valid(): 
+
+        if form.is_valid():
             # later implement if the employee already exists then throw error
             form.save()
             messages.success(request, 'Created successfully')
@@ -34,6 +35,7 @@ def createEmployee(request):
     })
 
 # editEmployee instance
+
+
 def editEmployee(request):
     pass
-

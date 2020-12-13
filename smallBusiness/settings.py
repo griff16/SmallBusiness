@@ -13,6 +13,7 @@ this is the url for how to convert sqlite to postgresql
 https://www.shubhamdipt.com/blog/django-transfer-data-from-sqlite-to-another-database/
 """
 
+import dj_database_url
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'employee',
     'django_countries',  # added django countries from packages
+    'django_tables2',
 ]
 
 MIDDLEWARE = [
@@ -135,10 +137,8 @@ STATICFILES_DIRS = (
 #  Add configuration for static files storage using whitenoise
 # STATICFILES_STORAGE = 'whitenoise.django.CompressedManifestStaticFilesStorage'
 
-import dj_database_url 
-prod_db  =  dj_database_url.config(conn_max_age=500)
+prod_db = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
 
-LOGIN_REDIRECT_URL = 'signup'  # after successful login temporarily redirecting to the signup page
-
-
+# after successful login temporarily redirecting to the signup page
+LOGIN_REDIRECT_URL = 'signup'

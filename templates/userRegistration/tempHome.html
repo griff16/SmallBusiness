@@ -1,31 +1,24 @@
-{% extends "layout/layout_home.html" %}
-
-{% block title %}Temp Home{% endblock %}
-
+{% extends "layout/layout_home.html" %} {% block title %}Temp Home{% endblock %}
 {% block body %}
-    <h2>Temp home page</h2>
-    <p>here lists all the accesible links for this projects</p>
-    
-    <ul>
-        <li>
-            <a href="{% url 'login' %}">Login</a>
-        </li>
-        
-        <li>
-            <a href="{% url 'signup' %}">Signup</a>
-        </li>
-        
-        <li>
-            <a href="{% url 'admin:index' %}">admin</a>
-        </li>
+<h2>Home page</h2>
+<p>Here lists all the accesible links for this projects</p>
 
-        <li>
-            <a href="{% url 'employee_landing_view' %}">Employee Landing View</a>
-        </li>
+<ul>
+    <li>
+        <a href="{% url 'login' %}">Login</a>
+    </li>
 
-        <li>
-            <a href="{% url 'employee_create' %}">New Employee</a>
-        </li>
-    </ul>
-    
+    <li>
+        <a href="{% url 'signup' %}">Signup</a>
+    </li>
+
+    <li>
+        <a href="{% url 'employee_landing_view' %}">Employee Landing View</a>
+    </li>
+
+    <li>
+        <a href="{% url 'employee_create' %}">New Employee</a>
+    </li>
+</ul>
+
 {% endblock %}

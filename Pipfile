@@ -13,6 +13,7 @@ whitenoise = "==4.1.4"
 psycopg2 = "*"
 django-crispy-forms = "*"
 django-countries = "*"
+django-tables2 = "*"
 
 [requires]
 python_version = "3.7"

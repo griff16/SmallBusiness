@@ -6,4 +6,3 @@ urlpatterns = [
     path('', homeView, name='home'),  # temporary homepage
     path('signup/', signUpPage, name='signup'),
 ]
-
