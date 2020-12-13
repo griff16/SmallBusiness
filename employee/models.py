@@ -6,7 +6,7 @@ from django.db import models
 
 
 class Employees(models.Model):
-    id = models.AutoField(primary_key=True)
+    id_auto = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
     dateOfBirth = models.DateField()
     gender = models.NullBooleanField(

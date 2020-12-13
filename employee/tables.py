@@ -7,4 +7,4 @@ class EmployeeTable(tables.Table):
     class Meta:
         model = Employees
         template_name = "django_tables2/bootstrap.html"
-        fields = ('ID', 'name', 'phone', 'email', 'dateOfBirth')
+        fields = ('id_auto', 'name', 'phone', 'email', 'dateOfBirth')
